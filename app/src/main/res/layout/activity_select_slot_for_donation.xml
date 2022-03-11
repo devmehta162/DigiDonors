@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".Home.SelectSlotForDonationActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100"
+            android:orientation="vertical">
+
+
+
+
+        <include layout="@layout/toolbar_with_text"
+            android:id="@+id/toolbar"
+            />
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/NewAddresscardview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="name"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/name"
+                            android:layout_marginTop="5dp"
+                            android:text="Address"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/address"
+                            android:textColor="@color/black"
+
+                            android:text="city"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/address"
+                            android:textColor="@color/black"
+
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@+id/city"
+                            android:text="state"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/pincode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/address"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@+id/state"
+                            android:text="pincode"
+                            android:textColor="@color/black"
+
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/state"
+                            android:paddingTop="4dp"
+                            android:textColor="@color/black"
+                            android:text="Mobile: "
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/mobileNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/state"
+                            android:layout_toRightOf="@+id/mobile"
+                            android:paddingTop="4dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/changeOrAddAddressBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mobileNo"
+                            android:layout_marginTop="22dp"
+                            android:background="@drawable/black_border"
+                            android:text="CHANGE OR ADD ADDRESS"
+                            android:textColor="@color/black" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="CHOOSE A PICKUP SLOT"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+
+
+                    <!--        <TextView-->
+                    <!--            android:layout_width="wrap_content"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:id="@+id/currentDate"-->
+                    <!--            android:text="TUE, 18TH MAY:"-->
+                    <!--            android:layout_marginLeft="10dp"-->
+                    <!--            android:layout_marginTop="10dp"-->
+                    <!--            />-->
+
+
+                    <!--        <LinearLayout-->
+                    <!--            android:layout_width="match_parent"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:orientation="horizontal"-->
+                    <!--            android:layout_marginTop="10dp"-->
+                    <!--            android:weightSum="100">-->
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/firstDateFirstTime"-->
+                    <!--                android:layout_width="0dp"-->
+                    <!--                android:layout_weight="50"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:text="10 AM - 12 PM"-->
+                    <!--                android:layout_marginLeft="10dp"-->
+                    <!--                android:background="@drawable/black_border"-->
+                    <!--                android:textColor="@color/black"-->
+                    <!--                android:backgroundTint="@color/black"/>-->
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/firstDateSecondTime"-->
+                    <!--                android:layout_width="0dp"-->
+                    <!--                android:layout_weight="50"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:text="12 PM - 2 PM"-->
+                    <!--                android:layout_marginRight="10dp"-->
+                    <!--                android:layout_marginLeft="5dp"-->
+                    <!--                android:background="@drawable/black_border"-->
+                    <!--                android:textColor="@color/black"-->
+                    <!--                android:backgroundTint="@color/black"/>-->
+
+                    <!--        </LinearLayout>-->
+
+                    <!--        <LinearLayout-->
+                    <!--            android:layout_width="match_parent"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:orientation="horizontal"-->
+                    <!--            android:layout_marginTop="10dp"-->
+                    <!--            android:weightSum="100">-->
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/firstDateThirdTime"-->
+                    <!--                android:layout_width="0dp"-->
+                    <!--                android:layout_weight="50"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:text="2 PM - 4 PM"-->
+                    <!--                android:layout_marginLeft="10dp"-->
+                    <!--                android:background="@drawable/black_border"-->
+                    <!--                android:textColor="@color/black"-->
+                    <!--                android:backgroundTint="@color/black"-->
+                    <!--                android:layout_marginRight="15dp"/>-->
+
+                    <!--        </LinearLayout>-->
+
+                    <!--        <TextView-->
+                    <!--            android:layout_width="wrap_content"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:id="@+id/nextDate"-->
+                    <!--            android:text="TUE, 19TH MAY:"-->
+                    <!--            android:layout_marginLeft="10dp"-->
+                    <!--            android:layout_marginTop="10dp"-->
+                    <!--            />-->
+
+
+                    <!--        <LinearLayout-->
+                    <!--            android:layout_width="match_parent"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:orientation="horizontal"-->
+                    <!--            android:layout_marginTop="10dp"-->
+                    <!--            android:weightSum="100">-->
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/secondDateFirstTime"-->
+                    <!--                android:layout_width="0dp"-->
+                    <!--                android:layout_weight="50"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:text="10 AM - 12 PM"-->
+                    <!--                android:layout_marginLeft="10dp"-->
+                    <!--                android:background="@drawable/black_border"-->
+                    <!--                android:textColor="@color/black"-->
+                    <!--                android:backgroundTint="@color/black"/>-->
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/secondDateSecondTime"-->
+                    <!--                android:layout_width="0dp"-->
+                    <!--                android:layout_weight="50"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:text="12 PM - 2 PM"-->
+                    <!--                android:layout_marginRight="10dp"-->
+                    <!--                android:layout_marginLeft="5dp"-->
+                    <!--                android:background="@drawable/black_border"-->
+                    <!--                android:textColor="@color/black"-->
+                    <!--                android:backgroundTint="@color/black"/>-->
+
+                    <!--        </LinearLayout>-->
+
+                    <!--        <LinearLayout-->
+                    <!--            android:layout_width="match_parent"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:orientation="horizontal"-->
+                    <!--            android:layout_marginTop="10dp"-->
+                    <!--            android:weightSum="100">-->
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/secondDateThirdTime"-->
+                    <!--                android:layout_width="0dp"-->
+                    <!--                android:layout_weight="50"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:text="2 PM - 4 PM"-->
+                    <!--                android:layout_marginLeft="10dp"-->
+                    <!--                android:background="@drawable/black_border"-->
+                    <!--                android:textColor="@color/black"-->
+                    <!--                android:backgroundTint="@color/black"-->
+                    <!--                android:layout_marginRight="15dp"/>-->
+
+                    <!--        </LinearLayout>-->
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/black_border_with_white_background"
+                        android:layout_margin="10dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/clockImg1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:backgroundTint="@color/purple_200"
+
+                            android:src="@drawable/ic_baseline_access_time_24" />
+
+                        <TextView
+                            android:id="@+id/select_date_time_for_donation"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/clockImg1"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="@color/black"
+
+                            />
+                        <ImageView
+                            android:id="@+id/arrowDown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:backgroundTint="@color/purple_200"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Quantity"
+                        android:id="@+id/quatityTxt"
+                        android:visibility="gone"
+                        android:layout_marginTop="20dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/noOfClothes"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:inputType="number"
+                        android:visibility="gone"
+                        android:background="@drawable/black_border_with_white_background"
+                        android:hint="Number of clothes you want to donate"
+                        android:padding="10dp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/noOfBooks"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:inputType="number"
+                        android:visibility="gone"
+
+                        android:background="@drawable/black_border_with_white_background"
+                        android:hint="Number of books you want to donate"
+                        android:padding="10dp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/bloodTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="BLOOD GROUP"
+                        android:visibility="gone"
+
+                        android:layout_marginTop="20dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+
+
+                    <EditText
+                        android:id="@+id/whichBloodGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+
+                        android:background="@drawable/black_border_with_white_background"
+                        android:hint="Blood group you want to donate"
+
+                        android:padding="10dp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/descriptionTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Description"
+                        android:layout_marginTop="20dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+
+                    <EditText
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="Description"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:background="@drawable/black_border_with_white_background"
+                        android:padding="10dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/nextBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/curveborders"
+                        android:backgroundTint="@color/appThemeColor"
+                        android:textColor="@color/white"
+                        android:text="Next" />
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

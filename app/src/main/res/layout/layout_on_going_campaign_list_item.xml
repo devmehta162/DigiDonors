@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="220dp"
+        app:cardCornerRadius="5dp"
+       >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/campaignImageUrl"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/clothes" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/campaignHeading"
+                android:text="DigiDonors"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="11dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/campaignDetails"
+                android:text="Panipat,Haryana"
+                android:textSize="9sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

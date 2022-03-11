@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_color"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="#E3EEFF"
+            android:background="@drawable/curveborders"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true">
+
+
+            <ImageView
+                android:id="@+id/group_item_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="7dp"
+                android:backgroundTint="@color/appThemeColor"
+                android:layout_marginLeft="7dp"
+
+                android:src="@drawable/ic_food"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/donationCategoriesName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="50dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:paddingLeft="60dp"
+        android:layout_centerVertical="true"
+        />
+
+
+    <ImageView
+        android:id="@+id/imgDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"/>
+
+
+
+    </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/NoOfGroupDonation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="10"
+            android:textColor="@color/white"
+            android:background="@drawable/circular_background"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/appThemeColor"
+           />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+
+        android:weightSum="2"
+        tools:context=".Home.UserAddressActivity">
+
+
+     <include layout="@layout/toolbar_with_text"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/newAddressBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/black_border"
+            android:gravity="center_horizontal"
+            android:text="Add new Address"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/black"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewUserAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1.98"
+            android:background="#F5F5F5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/appButtonColor"
+            android:padding="10dp"
+            android:text="Confirm"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+

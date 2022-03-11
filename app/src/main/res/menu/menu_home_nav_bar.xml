@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        >
+
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/ic_home"
+            />
+        <item
+            android:id="@+id/nav_my_donation"
+            android:title="My Donations"
+            android:icon="@drawable/donation"
+            />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_gallery"-->
+<!--            android:icon="@drawable/ic_gallery"-->
+<!--          android:title="Gallery" />-->
+        <item
+            android:id="@+id/nav_work"
+            android:icon="@drawable/ic_how_we_work"
+
+            android:title="How we work" />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_Login"-->
+<!--            android:icon="@drawable/ic_log_in"-->
+
+<!--            android:title="Login" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_Logout"-->
+<!--            android:icon="@drawable/ic_log_out"-->
+
+<!--            android:title="Logout" />-->
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share"
+
+            android:title="Share" />
+
+        <item
+            android:id="@+id/nav_rate"
+            android:icon="@drawable/ic_rate_us"
+            android:title="Rate us" />
+<!--        <item-->
+<!--            android:id="@+id/nav_rewards"-->
+<!--            android:icon="@drawable/ic_rewards"-->
+
+<!--            android:title="Rewards" />-->
+
+
+        <item
+            android:id="@+id/privacy_policy"
+            android:icon="@drawable/privacypolicy"
+            android:title="Privacy Policy"
+            />
+
+    </group>
+
+
+
+
+
+
+     </menu>

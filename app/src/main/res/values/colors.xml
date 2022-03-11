@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#124c8c</color>
+    <color name="purple_500">#005CB2</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#bfbfbf</color>
+    <color name="colorPrimary">#0782f5</color>
+    <color name="colorPrimaryDark">#0578F5</color>
+    <color name="colorAccent">#DCCB49</color>
+    <color name="custom_grey">#808080</color>
+    <color name="text_light_grey">#A8A7A7</color>
+    <color name="text_darker_grey">#9C9A9A</color>
+    <color name="light_grey">#666666</color>
+    <color name="primaryColor">#3f51b5</color>
+    <color name="grey_color">#f3f5f6</color>
+    <color name="primaryLightColor">#757de8</color>
+    <color name="primaryDarkColor">#002984</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="colorSecondary">#a1bcf2</color>
+    <color name="colorSecondaryDark">#708cbf</color>
+    <color name="green">#2a9e30</color>
+    <color name="splash_backgroud">#C2C2C2</color>
+    <color name="colorSecondaryAccent">#d4eeff</color>
+    <color name="whiteSmoke">#F5F5F5</color>
+    <color name="frostWhite">#f6f0e5</color>
+    <color name="lightblueshade">#edf1fe</color>
+    <color name="greenbright">#07dc86</color>
+    <color name="orange">#f7931e</color>
+    <color name="bluelightbutton">#18BFCC</color>
+    <color name="yellow_dark">#DCCB49</color>
+    <color name="color_two">#E3E0E0</color>
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorPrimaryLogin">#536DFE</color>
+    <color name="colorPrimaryDarkLogin">#536DFE</color>
+    <color name="colorAccentLogin">#F44336</color>
+
+    <color name="appThemeColor">#124c8c</color>
+    <color name="appButtonColor">#24ade2</color>
+    <color name="homeItemsCardBackGround">#E3EEFF</color>
+    <color name="homePeopleCardBackGround">#FFE3EA</color>
+
+
+    //#034EBF, 100%
+    //124c8c
+</resources>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.NgoDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar_with_text"
+            />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/ngo_youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:autoPlay="false"
+            app:showSeekBar="true"
+            android:visibility="gone"
+            app:showVideoDuration="true"
+            app:showVideoCurrentTime="true"
+            app:showYouTubeButton="false"
+
+            app:handleNetworkEvents="true"
+            app:showFullScreenButton="false"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/poorgirl"
+            android:scaleType="fitXY"
+            android:id="@+id/ngoMainImage"
+            android:alpha="0.9"
+            />
+
+        <TextView
+            android:id="@+id/ngoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GOONJ"
+            android:textColor="@color/white"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:alpha="0.9" />
+
+        <TextView
+            android:id="@+id/ngoAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ngoName"
+            android:layout_marginLeft="40dp"
+            android:text="New Delhi"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/black_border_with_white_background"
+           android:layout_margin="5dp"
+           android:elevation="2dp"
+           android:outlineAmbientShadowColor="@color/black"
+
+          >
+
+           <com.borjabravo.readmoretextview.ReadMoreTextView
+               android:id="@+id/ngoDetails"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Sambhav Foundation is dedicated to the service of those who are in need. Sambhav has two main initiatives
+Sponsorship of vocational education and training programmes for the deserving and needy candidates and informal sector workers identified by LabourNet. Sambhav identifies school drop outs/ college drop outs and first time learners and hand holds them for the duration of training and beyond till they are capable of earning a decent livelihood. Sambhav has reached out to over 3000 disadvantaged but talented youth since its inception.
+Sambhav runs a full day centre for children who are mentally challenged, autistic and have learning difficulties. A majority of our school children are from economically weaker sections of the society. We have been able to train about 300 hundred special children since in the inception of our center in 2006. At present the center has about 80 special children."
+
+               android:padding="5dp"
+               android:layout_margin="5dp"
+               app:trimExpandedText="@string/read_less"
+               app:trimCollapsedText="@string/read_more"
+               app:trimMode="trimModeLength"
+               app:trimLength="180"
+               app:colorClickableText="@color/appThemeColor"
+               android:textColor="@color/black"/>
+
+
+
+
+
+       </LinearLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donate To"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact us"
+            android:textColor="@color/appThemeColor"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/donation"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="shambahv@gmail.com"
+                android:layout_gravity="center"
+                android:textColor="@color/appThemeColor"
+                android:id="@+id/ngoEmail"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/donation"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8273323421"
+                android:layout_gravity="center"
+                android:textColor="@color/appThemeColor"
+                android:id="@+id/ngoPhone"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/donation"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="www.shambhav.org"
+                android:layout_gravity="center"
+                android:textColor="@color/appThemeColor"
+                android:id="@+id/ngoWebsite"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="3dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/NewAddresscardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/check"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_checkbox"
+                android:visibility="visible" />
+
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:text="Address"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:text="city"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/city"
+                android:layout_below="@id/address"
+                android:layout_marginLeft="3dp"
+                android:text="state"
+                android:textSize="14sp"
+                />
+
+
+            <TextView
+                android:id="@+id/pincode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_toRightOf="@+id/state"
+                android:text="132103"
+                android:layout_marginLeft="3dp"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/state"
+                android:paddingTop="4dp"
+                android:text="Mobile: "
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/mobileNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/state"
+                android:layout_toRightOf="@+id/mobile"
+                android:paddingTop="4dp"
+                android:text="9896682998"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+
+
+
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/mobileNo"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/editButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:visibility="invisible"
+                    android:background="@android:drawable/ic_menu_edit" />
+
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/ic_delete" />
+
+            </TableRow>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

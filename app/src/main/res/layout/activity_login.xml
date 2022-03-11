@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+
+    <include
+        layout="@layout/toolbar_with_text"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        android:background="@color/appThemeColor"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center|bottom"/>
+
+
+
+<!--        <TextView-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="29dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:fontFamily="@font/nunito_light"-->
+<!--            android:text="Enter the OTP code that is sent to your registered email"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="16sp" />-->
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="75"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="40dp"
+            android:text="Sign In to start donating"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="#000102"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/btn_curve_borders"
+            android:orientation="horizontal">
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circular_background"
+                    android:backgroundTint="@color/homeItemsCardBackGround"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nunito_light"/>
+
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/inputMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Phone Number"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="7dp"
+                android:paddingTop="17dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="17dp"
+                android:textColorHint="#585858"
+                android:textSize="15sp"
+                tools:targetApi="m"
+                app:boxStrokeColor="#585858"
+                app:boxStrokeWidth="1.5dp"
+                app:hintEnabled="false"
+                android:background="@android:color/transparent"
+
+                />
+
+
+
+
+        </LinearLayout>
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:boxStrokeColor="#585858"-->
+<!--            app:boxStrokeWidth="1.5dp"-->
+<!--            app:hintEnabled="false"-->
+<!--            >-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/inputMobile"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/btn_curve_borders"-->
+<!--                android:hint="Enter Phone Number"-->
+<!--                android:inputType="phone"-->
+<!--                android:maxLines="1"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:paddingStart="17dp"-->
+<!--                android:paddingTop="17dp"-->
+<!--                android:paddingEnd="17dp"-->
+<!--                android:paddingBottom="17dp"-->
+<!--                android:textColorHint="#585858"-->
+<!--                android:textSize="15sp"-->
+<!--                tools:targetApi="m"-->
+<!--                />-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp">
+
+            <CheckBox
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+
+                android:id="@+id/checkBoxTermsOfUse"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:text="I have read and agree with the"
+                />
+            <TextView
+                android:id="@+id/termsOfUseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginStart="2dp"
+                android:textSize="12sp"
+
+                android:text="Terms of Use."
+                />
+
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnGetOtp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/main_page_btn_background"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="12dp"
+                android:text="Send Otp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:rippleColor="#666666" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="OR"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_googleSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_curve_borders"
+            android:backgroundTint="@color/grey_color"
+            android:elevation="8dp"
+            android:text="Continue with google"
+            android:layout_marginStart="20dp"
+            android:drawableLeft="@drawable/googleicon"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

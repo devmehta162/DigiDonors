@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/enterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Full Name"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/enterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/enterName"
+        android:hint="Enter Email Id"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/enterPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number"
+        android:layout_below="@+id/enterEmail"
+        android:inputType="phone"
+        android:padding="10dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_below="@+id/enterPhoneNumber"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/registerFinal"/>
+</RelativeLayout>

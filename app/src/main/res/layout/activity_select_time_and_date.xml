@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SelectTimeAndDate">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/home_activity_background"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pickup Day"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        />
+    <EditText
+        android:id="@+id/input_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Which date you want to donate"
+        android:drawableRight="@drawable/ic_baseline_calendar_today_24"
+        android:inputType="textCapWords"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textAppearance="?android:textAppearanceMedium"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preffered Time To Collect"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        />
+
+    <EditText
+        android:id="@+id/input_time_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Select your preferred time"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="5dp"
+        android:drawableRight="@drawable/ic_baseline_access_time_24"
+        android:inputType="textCapWords"
+        android:text=""
+        android:textAppearance="?android:textAppearanceMedium"
+        />
+    <Button
+        android:id="@+id/finishBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Finish"/>
+
+
+</LinearLayout>

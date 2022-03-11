@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "742634402596",
+    "firebase_url": "https://digidonors-162.firebaseio.com",
+    "project_id": "digidonors-162",
+    "storage_bucket": "digidonors-162.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742634402596:android:5accab67bfca4769d9b9b1",
+        "android_client_info": {
+          "package_name": "com.dm.digidonors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742634402596-btufd7cfkelq4l85rhfkskmle42hco5g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dm.digidonors",
+            "certificate_hash": "19241f1d658f793d826b587957257719170de1a4"
+          }
+        },
+        {
+          "client_id": "742634402596-diack0a5jd11b8522qkmvlk2187k8u65.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dm.digidonors",
+            "certificate_hash": "b858eaf6b211fc6363abdbd0712a7fb20b97859d"
+          }
+        },
+        {
+          "client_id": "742634402596-lp31fk6n9j0liebdc6e9g15cl8f205bv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYq6fI_McpatqIy9YOULXaGUijh-cTIfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742634402596-lp31fk6n9j0liebdc6e9g15cl8f205bv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742634402596:android:f4dd9598ae47dd8ed9b9b1",
+        "android_client_info": {
+          "package_name": "com.dm.digidonorspatner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742634402596-b7kf9f6ji4k31bug0e7u9dg01ckm3ea1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dm.digidonorspatner",
+            "certificate_hash": "19241f1d658f793d826b587957257719170de1a4"
+          }
+        },
+        {
+          "client_id": "742634402596-lp31fk6n9j0liebdc6e9g15cl8f205bv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYq6fI_McpatqIy9YOULXaGUijh-cTIfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742634402596-lp31fk6n9j0liebdc6e9g15cl8f205bv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

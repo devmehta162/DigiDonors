@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Webinar.MyWebinars">
+
+
+    <RelativeLayout
+        android:id="@+id/relLayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--          top toolbar -->
+        <RelativeLayout
+            android:id="@+id/rellayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/snippet_top_webinar_details" />
+
+        </RelativeLayout>
+        <!--            Middle Section (body)-->
+
+        <RelativeLayout
+            android:id="@+id/rellayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rellayout1">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon"
+                    android:id="@+id/webinarImage"/>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/webinateDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:textColor="#959799"
+                android:textSize="12sp"
+                android:layout_below="@+id/cardView"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/webinar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/webinateDate"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:layout_margin="3dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="#0B0B0B" />
+
+
+            <TextView
+                android:id="@+id/webinar_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/webinar_title"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_margin="3dp"
+                android:textSize="12sp"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="#959799" />
+
+            <TextView
+                android:id="@+id/webinartimetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/webinar_description"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_margin="2dp"
+                android:text="Time:"
+                android:textColor="#47474a"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:id="@+id/webinateTimings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_margin="2dp"
+                android:layout_below="@+id/webinar_description"
+                android:layout_toRightOf="@+id/webinartimetv"
+                android:textColor="#959799"
+                android:textSize="12sp"
+                />
+        </RelativeLayout>
+
+
+
+
+        <!--        Bottom Navigation-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/relLayout3"
+            >
+
+            <TextView
+                android:id="@+id/noOfSeatsLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:textColor="@color/purple_200"
+                android:text="50"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/noOfSeatsLeft"
+                android:layout_marginLeft="3dp"
+                android:text="seats Left"/>
+
+            <Button
+                android:id="@+id/registerWebinar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"/>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

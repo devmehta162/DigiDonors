@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.DashBoardActivity">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_with_text" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/black_border"
+                android:backgroundTint="@color/appThemeColor"
+                app:cardCornerRadius="10dp"
+                android:paddingBottom="30dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/gradient_background"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/headTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="We Helped"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="30dp"
+
+                        >
+
+
+                        <TextView
+                            android:id="@+id/NoOfItemsDonated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12,722"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/noOfDonationDone"
+                            app:layout_constraintBottom_toTopOf="@+id/itemsTxt"/>
+
+
+                        <TextView
+                            android:id="@+id/noOfDonationDone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="560"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            app:layout_constraintEnd_toStartOf="@+id/NoOfPeopleGotHelped"
+
+                            app:layout_constraintStart_toEndOf="@+id/NoOfItemsDonated"
+                            app:layout_constraintTop_toTopOf="parent"
+                             />
+
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="43dp"
+                            android:background="@color/grey_color"
+                            android:backgroundTint="@color/grey_color"
+                            android:alpha="0.5"
+                            app:layout_constraintEnd_toStartOf="@+id/noOfDonationDone"
+                            app:layout_constraintStart_toEndOf="@+id/NoOfItemsDonated"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_editor_absoluteX="200dp"
+                            app:layout_editor_absoluteY="@dimen/_100sdp" />
+
+
+                        <TextView
+                            android:id="@+id/NoOfPeopleGotHelped"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1320"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginRight="30dp"
+                            android:textColor="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/noOfDonationDone"
+                            />
+
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="43dp"
+                            android:background="@color/grey_color"
+                            android:backgroundTint="@color/grey_color"
+                            app:layout_constraintEnd_toStartOf="@+id/NoOfPeopleGotHelped"
+                            app:layout_constraintStart_toEndOf="@+id/noOfDonationDone"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_editor_absoluteX="200dp"
+                            android:alpha="0.5"
+                            app:layout_editor_absoluteY="@dimen/_100sdp" />
+                        <TextView
+                            android:id="@+id/itemsTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="items"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="3dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/donationTxt"
+                            app:layout_constraintTop_toBottomOf="@+id/NoOfItemsDonated"
+                           />
+
+
+                        <TextView
+                            android:id="@+id/donationTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="donation"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginLeft="27dp"
+                            app:layout_constraintEnd_toStartOf="@+id/helpedPeopletxt"
+                            app:layout_constraintStart_toEndOf="@+id/itemsTxt"
+                            app:layout_constraintTop_toBottomOf="@+id/noOfDonationDone" />
+
+
+                        <TextView
+                            android:id="@+id/helpedPeopletxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Helped people"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="3dp"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/donationTxt"
+                            app:layout_constraintTop_toBottomOf="@+id/NoOfPeopleGotHelped"
+                          />
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ExpandableListView
+                android:id="@+id/elvDonation"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/white"
+                android:groupIndicator="@null"
+
+                >
+
+
+            </ExpandableListView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/curveborders"
+        android:text="Make Donation" />
+
+
+</RelativeLayout>

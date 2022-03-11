@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_gravity="center"
+    android:paddingBottom="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="3dp"
+        android:outlineAmbientShadowColor="@color/whiteSmoke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cureve_corners_dialog_box"
+
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/backDialogBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_arrow" />
+
+
+            <LinearLayout
+                android:id="@+id/llSelfDrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/txt_curve_borders_with_background"
+                android:backgroundTint="@color/whiteSmoke"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtSelfDrop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:gravity="center"
+                    android:text="Selfdrop"
+                    android:textColor="@color/appThemeColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llPickUpHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/txt_curve_borders_with_background"
+                android:backgroundTint="@color/whiteSmoke"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtpickUpHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="20dp"
+
+                    android:text="Pickup From Home"
+                    android:textColor="@color/appThemeColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/btn_curve_borders_with_background"
+                android:gravity="center"
+                android:text="Finish"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
