@@ -1,13 +1,12 @@
 package com.dm.digidonors.Activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.dm.digidonors.Login.LoginActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.dm.digidonors.MainActivity;
 import com.dm.digidonors.R;
 import com.google.firebase.auth.FirebaseAuth;

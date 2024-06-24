@@ -1,13 +1,12 @@
 package com.dm.digidonors.Home;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.dm.digidonors.R;
 import com.dm.digidonors.Utils.MyExpandableListAdapter;

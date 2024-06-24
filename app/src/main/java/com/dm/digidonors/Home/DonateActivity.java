@@ -68,7 +68,7 @@ public class DonateActivity extends AppCompatActivity {
     private ImageView imageView1, imageView2, imageView3, imageView4;
     private TextView image1, image2, image3, image4;
     FirebaseFirestore dbnew = FirebaseFirestore.getInstance();
-    private UserProfile userProfile=new UserProfile();
+    private UserProfile userProfile = new UserProfile();
     private static final String TAG = "DonateActivity";
     private ImageView backButton;
 
@@ -81,11 +81,7 @@ public class DonateActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-
-
-
-
-        toolbarHeadingText=findViewById(R.id.toolbarHeadingText);
+        toolbarHeadingText = findViewById(R.id.toolbarHeadingText);
 
         toolbarHeadingText.setText("Select Category");
 
@@ -102,11 +98,11 @@ public class DonateActivity extends AppCompatActivity {
         cloth = findViewById(R.id.cloth_card);
         books = findViewById(R.id.books_card);
         blood = findViewById(R.id.blood_card);
-        food =findViewById(R.id.food_card);
-        stationary =findViewById(R.id.stationary_card);
-        shoes =findViewById(R.id.shoes_card);
+        food = findViewById(R.id.food_card);
+        stationary = findViewById(R.id.stationary_card);
+        shoes = findViewById(R.id.shoes_card);
 
-        backButton=findViewById(R.id.backButton);
+        backButton = findViewById(R.id.backButton);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,9 +110,9 @@ public class DonateActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(DonateActivity.this);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(DonateActivity.this);
 
-         setupFirebaseAuth();
+        setupFirebaseAuth();
 
         if (!preferences.getString("mUserProfileDetails", "").equals("")) {
             String mUserProfile = preferences.getString("mUserProfileDetails", "");
@@ -125,7 +121,7 @@ public class DonateActivity extends AppCompatActivity {
 
             userProfile = new Gson().fromJson(mUserProfile, type);
 
-            Log.d(TAG, "onCreateView: userProfile.getUserName()"+userProfile.getUserName()+userProfile.getUserEmail());
+            Log.d(TAG, "onCreateView: userProfile.getUserName()" + userProfile.getUserName() + userProfile.getUserEmail());
 //
 
 
@@ -134,8 +130,8 @@ public class DonateActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent =new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
-                intent.putExtra("category","cloth");
+                Intent intent = new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
+                intent.putExtra("category", "cloth");
                 startActivity(intent);
 
                 checkCurrentFirebaseUser(user);
@@ -146,8 +142,8 @@ public class DonateActivity extends AppCompatActivity {
         books.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
-                intent.putExtra("category","books");
+                Intent intent = new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
+                intent.putExtra("category", "books");
                 startActivity(intent);
                 checkCurrentFirebaseUser(user);
             }
@@ -155,8 +151,8 @@ public class DonateActivity extends AppCompatActivity {
         blood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
-                intent.putExtra("category","blood");
+                Intent intent = new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
+                intent.putExtra("category", "blood");
                 startActivity(intent);
                 checkCurrentFirebaseUser(user);
             }
@@ -164,8 +160,8 @@ public class DonateActivity extends AppCompatActivity {
         food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
-                intent.putExtra("category","food");
+                Intent intent = new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
+                intent.putExtra("category", "food");
 
                 startActivity(intent);
                 checkCurrentFirebaseUser(user);
@@ -174,8 +170,8 @@ public class DonateActivity extends AppCompatActivity {
         stationary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
-                intent.putExtra("category","stationary");
+                Intent intent = new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
+                intent.putExtra("category", "stationary");
 
                 startActivity(intent);
                 checkCurrentFirebaseUser(user);
@@ -185,8 +181,8 @@ public class DonateActivity extends AppCompatActivity {
         shoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
-                intent.putExtra("category","shoes");
+                Intent intent = new Intent(DonateActivity.this, SelectSlotForDonationActivity.class);
+                intent.putExtra("category", "shoes");
 
                 startActivity(intent);
                 checkCurrentFirebaseUser(user);
@@ -212,13 +208,14 @@ public class DonateActivity extends AppCompatActivity {
         }
 
     }
+
     private void setupFirebaseAuth() {
         mAuth = FirebaseAuth.getInstance();
         mAuthListner = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
-                 user = firebaseAuth.getCurrentUser();
+                user = firebaseAuth.getCurrentUser();
 
                 //check if user is logged in
 

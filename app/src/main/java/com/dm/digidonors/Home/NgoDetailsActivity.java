@@ -1,10 +1,9 @@
 package com.dm.digidonors.Home;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.dm.digidonors.R;
 import com.dm.digidonors.models.RecentlyAddedNgoModel;
@@ -40,5 +39,11 @@ public class NgoDetailsActivity extends AppCompatActivity {
         ngoWebsite.setText(recentlyAddedNgoModel.getWebsitelink());
 
 //        Toast.makeText(this, ""+recentlyAddedNgoModel.getNgoName(), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

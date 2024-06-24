@@ -6,12 +6,25 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.graphics.Color;
-import android.graphics.Outline;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.LinearInterpolator;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
@@ -21,38 +34,18 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Handler;
-import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewOutlineProvider;
-import android.view.animation.LinearInterpolator;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.dm.digidonors.Activities.HowWeWork;
-import com.dm.digidonors.MyDonation.MyDonationsActivity;
 import com.dm.digidonors.Activities.ProfileActivity;
 import com.dm.digidonors.Activities.WebViewActivity;
 import com.dm.digidonors.Login.LoginActivity;
+import com.dm.digidonors.MyDonation.MyDonationsActivity;
 import com.dm.digidonors.R;
-import com.dm.digidonors.Utils.Helpers;
 import com.dm.digidonors.Utils.OnGoingCampaignAdapter;
 import com.dm.digidonors.Utils.RecentlyAddedNgoAdapter;
 import com.dm.digidonors.Utils.UniversalImageLoader;
 import com.dm.digidonors.models.OnGoingCampaignModel;
 import com.dm.digidonors.models.RecentlyAddedNgoModel;
 import com.dm.digidonors.models.UserProfile;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
@@ -64,11 +57,9 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.utils.L;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.utils.YouTubePlayerTracker;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
@@ -83,11 +74,8 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
 
     private static final String STRING_CONSTANT = "DigiDonors";
     private YouTubePlayerView youTubePlayerView;
-    //    private PlayerView simpleExoPlayerView;
-//    private SimpleExoPlayer simpleExoPlayer;
-    public static int gTime, posit, positioninmain, selectionposs;
+
     private Toolbar toolbar;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
     private RecentlyAddedNgoAdapter recentlyAddedNgoAdapter;
     private ArrayList<RecentlyAddedNgoModel> recentlyAddedNgoModelArrayList;
     private RecentlyAddedNgoModel recentlyAddedNgoModel = new RecentlyAddedNgoModel();
@@ -293,7 +281,6 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
             }
         });
 
-
         cloth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -301,10 +288,7 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
                 Intent intent = new Intent(getActivity(), SelectSlotForDonationActivity.class);
                 intent.putExtra("category", "cloth");
                 startActivity(intent);
-
                 checkCurrentFirebaseUser(user);
-
-
             }
         });
         books.setOnClickListener(new View.OnClickListener() {
@@ -330,7 +314,6 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), SelectSlotForDonationActivity.class);
                 intent.putExtra("category", "food");
-
                 startActivity(intent);
                 checkCurrentFirebaseUser(user);
             }
@@ -391,10 +374,6 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
                         public void run() {
                             flag = 0;
                             Log.d(TAG, "run: simpleExoPlayerView GONE");
-//                            simpleExoPlayerView.setVisibility(View.GONE);
-//                            videoThubmnailImage.setVisibility(View.GONE);
-//                            aspectRatioFrameLayout.setVisibility(View.GONE);
-//                            videoPlayButton.setVisibility(View.GONE);
                             youTubePlayerView.setVisibility(View.GONE);
 
                             linearLayout_donate.setVisibility(View.VISIBLE);
@@ -424,10 +403,6 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-//                            simpleExoPlayerView.setVisibility(View.VISIBLE);
-//                            videoThubmnailImage.setVisibility(View.VISIBLE);
-//                            aspectRatioFrameLayout.setVisibility(View.VISIBLE);
-//                            videoPlayButton.setVisibility(View.VISIBLE);
 
                             youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                                 @Override
@@ -473,9 +448,9 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
             @Override
             public void onItemClick(RecentlyAddedNgoModel recentlyAddedNgoModel) {
 
-                Intent intent = new Intent(getActivity(), NgoDetailsActivity.class);
-                intent.putExtra("details", recentlyAddedNgoModel);
-                startActivity(intent);
+//                Intent intent = new Intent(getActivity(), NgoDetailsActivity.class);
+//                intent.putExtra("details", recentlyAddedNgoModel);
+//                startActivity(intent);
 //                Toast.makeText(getContext(), ""+recentlyAddedNgoModel.getNgoName(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -492,8 +467,6 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
         if (user != null) {
             uid = user.getUid();
 
-        } else {
-//            Toast.makeText(getActivity(), "User Not logged In", Toast.LENGTH_SHORT).show();
         }
         firebaseFirestore.collection("Ngo").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -844,8 +817,9 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
     }
 
     private void checkCurrentFirebaseUser(FirebaseUser user) {
-
-
+        if (user == null) {
+            startActivity(new Intent(getActivity(), LoginActivity.class));
+        }
     }
 
     private void setupFirebaseAuth() {
@@ -867,7 +841,6 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
             }
         };
     }
-
 
     @Override
     public void onDestroy() {

@@ -1,19 +1,16 @@
 package com.dm.digidonors.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
-import androidx.viewpager2.widget.ViewPager2;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.dm.digidonors.MainActivity;
 import com.dm.digidonors.R;
@@ -25,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HowWeWork extends AppCompatActivity {
-
 
     private onBoardingAdapter onboardingAdapter;
     private LinearLayout layoutOnboardingIndicators;
@@ -39,12 +35,8 @@ public class HowWeWork extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_we_work);
         toolbarHeadingText = findViewById(R.id.toolbarHeadingText);
-        backButton=findViewById(R.id.backButton);
-//
-//        toolbar=findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("How we Work");
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        backButton = findViewById(R.id.backButton);
+
         layoutOnboardingIndicators = findViewById(R.id.layoutOnboardingIndicators);
         buttonOnboardingAction = findViewById(R.id.buttonOnboardingAction);
 
@@ -53,7 +45,7 @@ public class HowWeWork extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-          //      Toast.makeText(HowWeWork.this, "back button pressed", Toast.LENGTH_SHORT).show();
+                //      Toast.makeText(HowWeWork.this, "back button pressed", Toast.LENGTH_SHORT).show();
 
                 onBackPressed();
             }

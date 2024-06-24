@@ -1,23 +1,20 @@
 package com.dm.digidonors.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.dm.digidonors.Login.LoginActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.dm.digidonors.MainActivity;
 import com.dm.digidonors.R;
-import com.dm.digidonors.Utils.Helpers;
 import com.dm.digidonors.Utils.UniversalImageLoader;
 import com.dm.digidonors.models.UserProfile;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,8 +23,6 @@ import com.google.gson.reflect.TypeToken;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.lang.reflect.Type;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
 
