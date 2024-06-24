@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,24 +41,24 @@ public class WebinarAdapter extends FirestoreRecyclerAdapter<Webinar, WebinarAda
 
             String descrtion = model.getDescription();
             if (descrtion.length() > 70) {
-                String des = descrtion.substring(0, 65) + "...See More";
+                String des = descrtion.substring(0, 65) + "...";
                 holder.webinarDescription.setText(des);
             } else {
                 holder.webinarDescription.setText(model.getDescription());
             }
 
-            holder.webinarTimings.setText(model.getStarttime());
-            holder.webinarDuration.setText(model.getEndtime());
+            holder.webinarTimings.setText(model.getStartTime()+" To "+model.getEndTime());
+            holder.webinarDuration.setText(model.getDuration()+" Hours");
 
 
-            holder.joinNow.setOnClickListener(new View.OnClickListener() {
+            holder.webinarLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(mContext, WebinarDetailsActivity.class);
                     intent.putExtra("title",model.getTitle());
                     intent.putExtra("description",model.getDescription());
-                    intent.putExtra("time",model.getStarttime());
-                    intent.putExtra("duration",model.getEndtime());
+                    intent.putExtra("time",model.getStartTime()+" To "+model.getEndTime());
+                    intent.putExtra("duration",model.getDuration()+" Hours");
                     intent.putExtra("benefits",model.getBenefits());
                     intent.putExtra("date",model.getDate());
                     intent.putExtra("fee",model.getFee());
@@ -89,7 +91,8 @@ public class WebinarAdapter extends FirestoreRecyclerAdapter<Webinar, WebinarAda
         private TextView webinarTimings;
         private TextView webinarDescription;
         private TextView webinarDuration;
-        private Button joinNow;
+        private LinearLayout webinarLayout;
+        private ImageView webinarImage;
 
 
         public MyWebinarHolder(View itemView) {
@@ -99,7 +102,8 @@ public class WebinarAdapter extends FirestoreRecyclerAdapter<Webinar, WebinarAda
             webinarTimings = itemView.findViewById(R.id.webinateTimings);
             webinarDescription = itemView.findViewById(R.id.webinar_description);
             webinarDuration = itemView.findViewById(R.id.webinarDuration);
-            joinNow = itemView.findViewById(R.id.joinNow);
+            webinarLayout = itemView.findViewById(R.id.webinarLayout);
+            webinarImage=itemView.findViewById(R.id.webinarImage);
 
         }
     }

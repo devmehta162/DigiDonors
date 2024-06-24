@@ -119,7 +119,7 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
     private YouTubePlayerTracker tracker;
 
     private static final String TAG = "MainPageFragment";
-    public static String videoid="";
+    public static String videoid = "";
 
 
     //    private AspectRatioFrameLayout aspectRatioFrameLayout;
@@ -196,7 +196,7 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
                 String donations = (String) documentSnapshot.get("donations");
                 String items = (String) documentSnapshot.get("items");
                 String people = (String) documentSnapshot.get("people");
-                if (videoid!=null) {
+                if (videoid != null) {
                     videoid = (String) documentSnapshot.get("videoid");
 
                 }
@@ -234,12 +234,12 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
 
                 // 8gzEX9SIl4c
 //                String videoId = "8gzEX9SIl4c";
-                if (videoid!=null){
+                if (videoid != null) {
                     if (!videoid.equals("")) {
 
                         youTubePlayer.cueVideo(videoid, 0);
                     }
-                }else {
+                } else {
                     String videoId = "8gzEX9SIl4c";
                     youTubePlayer.cueVideo(videoId, 0);
                 }
@@ -473,8 +473,8 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
             @Override
             public void onItemClick(RecentlyAddedNgoModel recentlyAddedNgoModel) {
 
-                Intent intent =new Intent(getActivity(),NgoDetailsActivity.class);
-                intent.putExtra("details",recentlyAddedNgoModel);
+                Intent intent = new Intent(getActivity(), NgoDetailsActivity.class);
+                intent.putExtra("details", recentlyAddedNgoModel);
                 startActivity(intent);
 //                Toast.makeText(getContext(), ""+recentlyAddedNgoModel.getNgoName(), Toast.LENGTH_SHORT).show();
             }
@@ -483,7 +483,6 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
 
         onGoingCampaignAdapter = new OnGoingCampaignAdapter(getActivity(), onGoingCampaignModelArrayList);
         rvOngoingCampaign.setAdapter(onGoingCampaignAdapter);
-
 
 
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -513,12 +512,11 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
                         recentlyAddedNgoAdapter.notifyDataSetChanged();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
 
-            }
-        });
-
+                    }
+                });
 
 
         firebaseFirestore.collection("onGoingCampaigns").get()
@@ -538,11 +536,11 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
                         onGoingCampaignAdapter.notifyDataSetChanged();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
 
-            }
-        });
+                    }
+                });
 
 
         Log.d(TAG, "onCreateView: " + preferences.getString("mUserProfileDetails", ""));
@@ -610,128 +608,6 @@ public class MainPageFragment extends Fragment implements NavigationView.OnNavig
         return view;
 
     }
-
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//
-//        if (youTubePlayerView == null) {
-//        } else {
-//            youTubePlayerView.cu(videoId, seekTime);
-//        }
-//    }
-
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-////        updateNavHeaderView(userProfile.getUserName(), userProfile.getUserEmail(), userProfile.getUserImageurl());
-////        getUrl("https://firebasestorage.googleapis.com/v0/b/digidonors-162.appspot.com/o/mainPageVideo%2F10mb.mp4?alt=media&token=99029825-4155-45f6-b78d-4d61da3dcc63");
-//
-////        startPlayer(simpleExoPlayer);
-//    }
-
-//
-//    private void getUrl(String url) {
-//        Log.d(TAG, "getUrl: " + url);
-//        Uri uri = Uri.parse(url);
-//        try {
-//            // Create a progressive media source pointing to a stream uri.
-//            mediaSource = new ProgressiveMediaSource.Factory(dataSourceFactory)
-//                    .createMediaSource(uri);
-//            // Create a player instance.
-////            simpleExoPlayer.setAudioAttributes(audioAttributes, /* handleAudioFocus= */ true);
-////
-////
-////            simpleExoPlayerView.setPlayer(simpleExoPlayer);
-////            simpleExoPlayer.prepare(mediaSource);
-//
-//
-//            simpleExoPlayer.addListener(new ExoPlayer.EventListener() {
-//                @Override
-//                public void onTimelineChanged(Timeline timeline, int reason) {
-//
-//                }
-//
-//
-//                @Override
-//                public void onTracksChanged(TrackGroupArray trackGroups, TrackSelectionArray trackSelections) {
-//
-//                }
-//
-//                @Override
-//                public void onLoadingChanged(boolean isLoading) {
-//
-//                }
-//
-//                @Override
-//                public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
-//
-//                    switch (playbackState) {
-//                        case ExoPlayer.STATE_READY:
-//                            Log.d(TAG, "onPlayerStateChanged: STATE_READY");
-//                            simpleExoPlayerView.setVisibility(View.VISIBLE);
-//                            break;
-//                        case ExoPlayer.STATE_ENDED:
-//
-//                            Log.d(TAG, "onPlayerStateChanged: STATE_ENDED");
-//
-//                            ObjectAnimator progressAnimator = ObjectAnimator.ofInt(progressBar2, "progress", 0, 100);
-//                            progressAnimator.setDuration(1000);
-//                            progressAnimator.setInterpolator(new LinearInterpolator());
-//                            progressAnimator.start();
-//
-//                            final Handler handler = new Handler();
-//                            handler.postDelayed(new Runnable() {
-//                                @Override
-//                                public void run() {
-//                                    flag = 0;
-//                                    Log.d(TAG, "run: simpleExoPlayerView GONE");
-//                                    simpleExoPlayerView.setVisibility(View.GONE);
-//                                    videoThubmnailImage.setVisibility(View.GONE);
-//                                    aspectRatioFrameLayout.setVisibility(View.GONE);
-//
-//                                    videoPlayButton.setVisibility(View.GONE);
-//                                    linearLayout_donate.setVisibility(View.VISIBLE);
-//                                    img_select_category.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#E3EEFF")));
-//                                    circular_background2.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#034EBF")));
-//
-//                                    view2.setVisibility(View.VISIBLE);
-//                                    view1.setVisibility(View.GONE);
-//                                    txtSelectCategory.setTextColor(ColorStateList.valueOf(Color.parseColor("#034EBF")));
-//                                }
-//                            }, 1000);
-//
-//
-//                    }
-//
-//
-//                }
-//
-//                @Override
-//                public void onPlayerError(ExoPlaybackException error) {
-//
-//                }
-//
-//
-//                @Override
-//                public void onPositionDiscontinuity(int reason) {
-//
-//                }
-//
-//                @Override
-//                public void onPlaybackParametersChanged(PlaybackParameters playbackParameters) {
-//
-//                }
-//            });
-//            simpleExoPlayer.setPlayWhenReady(true);
-////            simpleExoPlayer.seekTo(getIntent().getIntExtra("gTime", 0));
-//            simpleExoPlayer.seekTo(gTime);
-//            simpleExoPlayerView.setFastForwardIncrementMs(10000);
-//            simpleExoPlayerView.setRewindIncrementMs(10000);
-//        } catch (Exception e) {
-//        }
-//    }
-
 
     @Override
     public void onStart() {

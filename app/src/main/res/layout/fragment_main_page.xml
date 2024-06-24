@@ -9,10 +9,6 @@
     android:orientation="vertical"
     tools:openDrawer="start">
 
-
-    <!--    <ScrollView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent">-->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="250dp"
@@ -143,7 +139,6 @@
                                 android:indeterminateTint="@color/appThemeColor"
                                 android:progressTint="@color/appThemeColor" />
 
-
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -155,7 +150,6 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="end">
-
 
                                     <ImageView
                                         android:id="@+id/circular_background2"
@@ -171,15 +165,9 @@
                                         android:layout_height="30dp"
                                         android:layout_centerInParent="true"
                                         android:background="@drawable/donateicon" />
-
-
                                 </RelativeLayout>
-
-
                             </LinearLayout>
-
                         </LinearLayout>
-
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -196,24 +184,19 @@
                                 <TextView
                                     android:layout_width="80dp"
                                     android:layout_height="wrap_content"
-                                    android:text="Learn more about"
                                     android:layout_marginStart="3dp"
+                                    android:text="Learn more about"
                                     android:textColor="@color/appThemeColor"
                                     android:textSize="9sp" />
 
                                 <TextView
                                     android:layout_width="80dp"
                                     android:layout_height="wrap_content"
-                                    android:text="DigiDonors"
                                     android:gravity="center_horizontal"
+                                    android:text="DigiDonors"
                                     android:textColor="@color/appThemeColor"
                                     android:textSize="9sp" />
-
-
                             </LinearLayout>
-
-
-
 
                             <TextView
                                 android:id="@+id/txtSelectCategory"
@@ -246,22 +229,18 @@
                                 android:layout_width="60dp"
                                 android:layout_height="3dp"
                                 android:layout_alignParentEnd="true"
-                                android:layout_marginEnd="45dp"
                                 android:layout_marginTop="10dp"
-                                android:visibility="gone"
-                                android:background="@color/appThemeColor" />
+                                android:layout_marginEnd="45dp"
+                                android:background="@color/appThemeColor"
+                                android:visibility="gone" />
 
                             <View
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-
                                 android:layout_marginTop="10dp"
                                 android:background="@color/grey_color" />
 
-
                         </RelativeLayout>
-
-
 
                     </LinearLayout>
 
@@ -281,145 +260,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:autoPlay="false"
-                            app:showSeekBar="true"
-                            app:showVideoDuration="true"
-                            app:showVideoCurrentTime="true"
-                            app:showYouTubeButton="false"
-
                             app:handleNetworkEvents="true"
                             app:showFullScreenButton="false"
-                            />
+                            app:showSeekBar="true"
+                            app:showVideoCurrentTime="true"
 
-<!--                        <com.google.android.exoplayer2.ui.AspectRatioFrameLayout-->
-<!--                            android:id="@+id/aspectRatioFrameLayout"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
+                            app:showVideoDuration="true"
+                            app:showYouTubeButton="false" />
 
-
-<!--                            app:resize_mode="fixed_width">-->
-
-<!--                            &lt;!&ndash; Preview image &ndash;&gt;-->
-<!--                            <ImageView-->
-<!--                                android:id="@+id/videoThubmnailImage"-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="302dp"-->
-<!--                                android:clickable="true"-->
-<!--                                android:focusable="true"-->
-
-<!--                                android:scaleType="centerCrop"-->
-<!--                                android:src="@drawable/videothumbnail" />-->
-
-<!--                            &lt;!&ndash; Play button &ndash;&gt;-->
-<!--                            <ImageView-->
-<!--                                android:id="@+id/videoPlayButton"-->
-<!--                                android:layout_width="50dp"-->
-<!--                                android:layout_height="50dp"-->
-<!--                                android:layout_gravity="center"-->
-<!--                                android:scaleType="fitCenter"-->
-<!--                                android:src="@drawable/ic_play" />-->
-
-<!--                            &lt;!&ndash; Video player &ndash;&gt;-->
-
-<!--                            <com.google.android.exoplayer2.ui.PlayerView-->
-<!--                                android:id="@+id/exoPlayer"-->
-<!--                                style="@style/ExoMediaButton.Next"-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="match_parent"-->
-<!--                                android:background="@android:color/background_dark"-->
-<!--                                android:visibility="gone"-->
-<!--                                app:controller_layout_id="@layout/custom_controller"-->
-<!--                                app:default_artwork="@drawable/videothumbnail"-->
-<!--                                app:fastforward_increment="10000"-->
-<!--                                app:hide_on_touch="true"-->
-<!--                                app:player_layout_id="@layout/exo_simple_player_view"-->
-<!--                                app:resize_mode="fill"-->
-<!--                                app:rewind_increment="10000"-->
-<!--                                app:show_timeout="2500"-->
-<!--                                app:use_controller="true" />-->
-                            <!--                            <com.google.android.exoplayer2.ui.PlayerView-->
-                            <!--                                android:id="@+id/exoPlayer"-->
-                            <!--                                style="@style/ExoMediaButton.Next"-->
-                            <!--                                android:layout_width="match_parent"-->
-                            <!--                                android:layout_height="match_parent"-->
-                            <!--                                android:background="@android:color/background_dark"-->
-                            <!--                                android:visibility="gone"-->
-                            <!--                                app:controller_layout_id="@layout/custom_controller"-->
-                            <!--                                app:default_artwork="@drawable/videothumbnail"-->
-                            <!--                                app:fastforward_increment="10000"-->
-                            <!--                                app:hide_on_touch="true"-->
-                            <!--                                app:player_layout_id="@layout/exo_simple_player_view"-->
-                            <!--                                app:resize_mode="fit"-->
-                            <!--                                app:rewind_increment="10000"-->
-                            <!--                                app:show_timeout="2500"-->
-                            <!--                                app:use_controller="true" />-->
-
-
-                            <!--                                android:layout_width="match_parent"-->
-                            <!--                                android:layout_height="match_parent"-->
-                            <!--                                android:background="@android:color/background_dark"-->
-                            <!--                                android:visibility="gone"-->
-                            <!--                                app:controller_layout_id="@layout/custom_controller"-->
-                            <!--                                app:default_artwork="@drawable/videothumbnail"-->
-                            <!--                                app:fastforward_increment="10000"-->
-                            <!--                                app:hide_on_touch="true"-->
-                            <!--                                app:player_layout_id="@layout/exo_simple_player_view"-->
-                            <!--                                app:resize_mode="fit"-->
-                            <!--                                app:rewind_increment="10000"-->
-                            <!--                                app:show_timeout="2500"-->
-                            <!--                                app:use_controller="true" />-->
-
-                            <!-- ProgressBar -->
-                            <ProgressBar
-                                android:id="@+id/progressbar"
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_centerInParent="true"
-                                android:layout_gravity="center"
-                                android:visibility="gone" />
-<!--                        </com.google.android.exoplayer2.ui.AspectRatioFrameLayout>-->
-
-                        <!--            <ImageView-->
-                        <!--                android:id="@+id/videoThubmnailImage"-->
-                        <!--                android:layout_width="match_parent"-->
-                        <!--                android:layout_height="230dp"-->
-                        <!--                android:layout_margin="10dp"-->
-                        <!--                android:src="@drawable/videothumbnail"-->
-                        <!--                />-->
-
-                        <!--            <ImageView-->
-                        <!--                android:id="@+id/videoPlayButton"-->
-                        <!--                android:layout_width="wrap_content"-->
-                        <!--                android:layout_height="wrap_content"-->
-                        <!--                android:layout_centerInParent="true"-->
-                        <!--                android:src="@drawable/ic_play" />-->
-
-
-                        <!--            <com.google.android.exoplayer2.ui.PlayerView-->
-                        <!--                android:id="@+id/exoPlayer"-->
-                        <!--                style="@style/ExoMediaButton.Next"-->
-                        <!--                android:layout_width="match_parent"-->
-                        <!--                android:layout_height="230dp"-->
-                        <!--                android:layout_margin="10dp"-->
-                        <!--                android:background="@android:color/background_dark"-->
-                        <!--                android:visibility="gone"-->
-                        <!--                app:controller_layout_id="@layout/custom_controller"-->
-                        <!--                app:fastforward_increment="10000"-->
-                        <!--                app:hide_on_touch="true"-->
-                        <!--                app:player_layout_id="@layout/exo_simple_player_view"-->
-                        <!--                app:resize_mode="fit"-->
-                        <!--                app:default_artwork="@drawable/videothumbnail"-->
-                        <!--                app:rewind_increment="10000"-->
-                        <!--                app:show_timeout="2500"-->
-                        <!--                app:use_controller="true" />-->
-
-                        <!--            <ProgressBar-->
-                        <!--                android:id="@+id/progressbar"-->
-                        <!--                android:layout_width="80dp"-->
-                        <!--                android:layout_height="80dp"-->
-                        <!--                android:layout_centerInParent="true"-->
-                        <!--                android:layout_gravity="center"-->
-                        <!--                android:visibility="gone" />-->
-
+                        <ProgressBar
+                            android:id="@+id/progressbar"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:visibility="gone" />
 
                         <ScrollView
                             android:layout_width="match_parent"
@@ -442,7 +297,6 @@
                             </LinearLayout>
 
                         </ScrollView>
-
 
 
                     </RelativeLayout>
@@ -702,6 +556,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/linearLayout2"
                         android:layout_marginTop="5dp"
+                        android:layout_marginBottom="60dp"
                         android:orientation="vertical">
 
 
@@ -742,7 +597,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="80dp"
                 android:layout_marginRight="80dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="12dp"
                 android:background="@drawable/main_page_btn_background"
                 android:text="Donate"
                 android:textColor="@color/white" />
@@ -750,6 +605,5 @@
 
 
     </LinearLayout>
-    <!--    </ScrollView>-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

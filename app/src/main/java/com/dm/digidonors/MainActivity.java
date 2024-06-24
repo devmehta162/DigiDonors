@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int HOME_FRAGMENT = 1;
     private Context mContext = MainActivity.this;
     public static final int ACTIVITY_NUM = 0;
-//    private BottomSheetBehavior bottomSheetBehavior;
+    private BottomSheetBehavior bottomSheetBehavior;
     View bottomSheetView;
 
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private FrameLayout frameLayout;
     private RelativeLayout relativeLayout;
-//    private BottomNavigationView bottomBar;
+    private SmoothBottomBar bottomBar;
     private int currentFragmentId;
 
     @Override
@@ -63,22 +63,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onComplete: "+ PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("MYLABEL", "defaultStringIfNothingFound"));
 
-//        bottomBar = findViewById(R.id.bottomNav);
-//        bottomNavigationView=findViewById(R.id.bottomNav);
-//        logOut=findViewById(R.id.log_out);
-//        mAuth = FirebaseAuth.getInstance();
-//        logOut.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mAuth.signOut();
-//                Intent intent =new Intent(MainActivity.this,LoginActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
-//        getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
+        bottomBar = findViewById(R.id.bottomNav);
 
-//        bottomBar.setOnNavigationItemSelectedListener(this.navListener);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new MainPageFragment()).commit();
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -88,45 +76,42 @@ public class MainActivity extends AppCompatActivity {
         loadFragment(new MainPageFragment());
 
 
-//        Toast.makeText(mContext, "cdks", Toast.LENGTH_SHORT).show();
-
-
        setupFirebaseAuth();
-//        bottomBar.setOnItemSelectedListener(new OnItemSelectedListener() {
-//            @Override
-//            public boolean onItemSelect(int i) {
-//                Fragment fragment = null;
-//                switch (i) {
-//                    case 0:
-//                        currentFragmentId = R.id.botton_nav_home;
-//                        fragment = new HomeFragment();
-//                        loadFragment(fragment);
-//                        break;
-//
-//                    case 1:
-//
-//                        currentFragmentId = R.id.botton_nav_social_media;
-//                        fragment = new SocialMediaFragment();
-//                        loadFragment(fragment);
-//
-//                        break;
-//                    case 2:
-//
-//                        currentFragmentId = R.id.bottom_nav_webinars;
-//                        fragment = new WebinarFragment();
-//                        loadFragment(fragment);
-//
-//                        break;
-//
-//                }
-//                return loadFragment(fragment);
-//            }
-//        });
-//        bottomBar.setOnItemReselectedListener(new OnItemReselectedListener() {
-//            @Override
-//            public void onItemReselect(int i) {
-//            }
-//        });
+        bottomBar.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public boolean onItemSelect(int i) {
+                Fragment fragment = null;
+                switch (i) {
+                    case 0:
+                        currentFragmentId = R.id.botton_nav_home;
+                        fragment = new MainPageFragment();
+                        loadFragment(fragment);
+                        break;
+
+                    case 1:
+
+                        currentFragmentId = R.id.botton_nav_social_media;
+                        fragment = new SocialMediaFragment();
+                        loadFragment(fragment);
+
+                        break;
+                    case 2:
+
+                        currentFragmentId = R.id.bottom_nav_webinars;
+                        fragment = new WebinarFragment();
+                        loadFragment(fragment);
+
+                        break;
+
+                }
+                return loadFragment(fragment);
+            }
+        });
+        bottomBar.setOnItemReselectedListener(new OnItemReselectedListener() {
+            @Override
+            public void onItemReselect(int i) {
+            }
+        });
     }
 
     private boolean loadFragment(Fragment fragment) {
@@ -135,11 +120,7 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.container, fragment)
-                    .commitAllowingStateLoss(); //Using this instead of commit: It is known as state loss.
-            // You happen to commit a FragmentTransaction from AsyncTask.
-            //That is prohibited by the framework itself.
-            //https://stackoverflow.com/questions/22713002/java-lang-illegalstateexception-can-not-perform-this-action-after-onsaveinstanc
-            //https://www.androiddesignpatterns.com/2013/08/fragment-transaction-commit-state-loss.html
+                    .commitAllowingStateLoss();
             return true;
         }
         return false;
@@ -158,42 +139,43 @@ public class MainActivity extends AppCompatActivity {
 //        transaction.commit();
 //
 //    }
-//public BottomNavigationView.OnNavigationItemSelectedListener navListener =
-//        new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-//                Fragment selectedFragment = null;
-////                progressBar.setVisibility(View.INVISIBLE);
-//                switch (menuItem.getItemId()){
 //
-//
-//                    case R.id.botton_nav_home:
-//
-//                        currentFragmentId = R.id.botton_nav_home;
-//
-//
-//                        selectedFragment = new MainPageFragment();
-//                        loadFragment(selectedFragment);
-//                        break;
-//                    case R.id.botton_nav_social_media:
-//
-//                        currentFragmentId = R.id.botton_nav_social_media;
-//                        selectedFragment = new SocialMediaFragment();
-//                        loadFragment(selectedFragment);
-//                        break;
-//                    case R.id.bottom_nav_webinars:
-//
-//                        currentFragmentId = R.id.bottom_nav_webinars;
-//                        selectedFragment = new WebinarFragment();
-//                        loadFragment(selectedFragment);
-//                        break;
-//
-//                }
-//
-//                if(selectedFragment!=null)   getSupportFragmentManager().beginTransaction().replace(R.id.container, selectedFragment).setReorderingAllowed(true).addToBackStack(selectedFragment.getClass().getName()).commit();
-//                return true;
-//            }
-//        };
+public BottomNavigationView.OnNavigationItemSelectedListener navListener =
+        new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                Fragment selectedFragment = null;
+//                progressBar.setVisibility(View.INVISIBLE);
+                switch (menuItem.getItemId()){
+
+
+                    case R.id.botton_nav_home:
+
+                        currentFragmentId = R.id.botton_nav_home;
+
+
+                        selectedFragment = new MainPageFragment();
+                        loadFragment(selectedFragment);
+                        break;
+                    case R.id.botton_nav_social_media:
+
+                        currentFragmentId = R.id.botton_nav_social_media;
+                        selectedFragment = new SocialMediaFragment();
+                        loadFragment(selectedFragment);
+                        break;
+                    case R.id.bottom_nav_webinars:
+
+                        currentFragmentId = R.id.bottom_nav_webinars;
+                        selectedFragment = new WebinarFragment();
+                        loadFragment(selectedFragment);
+                        break;
+
+                }
+
+                if(selectedFragment!=null)   getSupportFragmentManager().beginTransaction().replace(R.id.container, selectedFragment).setReorderingAllowed(true).addToBackStack(selectedFragment.getClass().getName()).commit();
+                return true;
+            }
+        };
 
 
     @Override

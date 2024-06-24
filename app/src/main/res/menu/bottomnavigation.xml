@@ -4,7 +4,7 @@
     <item
         android:id="@+id/botton_nav_home"
         android:title="@string/home"
-        android:icon="@drawable/ic_baseline_home_24"
+        android:icon="@drawable/ic_home"
         />
     <item
         android:id="@+id/botton_nav_social_media"
@@ -15,7 +15,7 @@
     <item
         android:id="@+id/bottom_nav_webinars"
         android:title="@string/webinars"
-        android:icon="@drawable/ic_baseline_web_24"
+        android:icon="@drawable/webinar"
 
         />
 </menu>

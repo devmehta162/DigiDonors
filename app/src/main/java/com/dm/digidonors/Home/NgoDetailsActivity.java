@@ -39,6 +39,6 @@ public class NgoDetailsActivity extends AppCompatActivity {
         ngoPhone.setText(recentlyAddedNgoModel.getPhonenumber());
         ngoWebsite.setText(recentlyAddedNgoModel.getWebsitelink());
 
-        Toast.makeText(this, ""+recentlyAddedNgoModel.getNgoName(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, ""+recentlyAddedNgoModel.getNgoName(), Toast.LENGTH_SHORT).show();
     }
 }

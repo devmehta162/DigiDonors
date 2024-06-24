@@ -5,25 +5,27 @@ public class Webinar {
     private String title;
     private String description;
     private String date;
-    private String starttime;
-    private String endtime;
+    private String startTime;
     private String fee;
     private String benefits;
     private String link;
     private String webinarId;
     private String userId;
+    private String endTime;
+    private String duration;
 
-    public Webinar(String title, String description, String date, String starttime, String endtime, String fee, String benefits, String link, String webinarId, String userId) {
+    public Webinar(String title, String description, String date, String startTime, String fee, String benefits, String link, String webinarId, String userId, String endTime, String duration) {
         this.title = title;
         this.description = description;
         this.date = date;
-        this.starttime = starttime;
-        this.endtime = endtime;
+        this.startTime = startTime;
         this.fee = fee;
         this.benefits = benefits;
         this.link = link;
         this.webinarId = webinarId;
         this.userId = userId;
+        this.endTime = endTime;
+        this.duration = duration;
     }
 
     public Webinar() {
@@ -53,20 +55,31 @@ public class Webinar {
         this.date = date;
     }
 
-    public String getStarttime() {
-        return starttime;
+    public String getStartTime() {
+        return startTime;
     }
 
-    public void setStarttime(String starttime) {
-        this.starttime = starttime;
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
     }
 
-    public String getEndtime() {
-        return endtime;
+
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 
-    public void setEndtime(String endtime) {
-        this.endtime = endtime;
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+
+    public String getEndTime() {
+        return endTime;
     }
 
     public String getFee() {
