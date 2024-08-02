@@ -38,7 +38,7 @@ public class MyDonationsActivity extends AppCompatActivity {
         setupFirebaseAuth();
         toolbarHeadingText=findViewById(R.id.toolbarHeadingText);
 
-        toolbarHeadingText.setText("My Donation");
+        toolbarHeadingText.setText(R.string.my_donation);
         backButton=findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
